@@ -1,7 +1,9 @@
-romans = [["", "M", "MM", "MMM"]
-        , ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
-        , ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
-    , ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]]
+romans = [   
+    , ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+    , ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+    , ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+    , ["", "M", "MM", "MMM"]
+    , ]
 
 def a2r(input_):
     retVal = ""
@@ -14,7 +16,7 @@ def a2r(input_):
             num = input_
             for i in range(4):
                 digit = num % 10
-                retVal += romans[i][digit]
+                retVal = romans[i][digit] + retVal
                 num = num // 10
     else:
         if isinstance(input_, float):
